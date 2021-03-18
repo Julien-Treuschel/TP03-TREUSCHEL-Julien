@@ -1,0 +1,12 @@
+<p>catalogue</p>
+
+<app-recherche [ob5$]="observable5$"></app-recherche>
+
+<br/>
+<button (click)="onClickBackeng()"> Get Backend</button>
+
+<!-- <div *ngIf="observable5Modif$ != null"> -->
+    <div  *ngFor = "let o of observable5$ | async">
+    {{o.titre}} / {{o.prix}} 
+    </div>
+<!-- </div> -->
