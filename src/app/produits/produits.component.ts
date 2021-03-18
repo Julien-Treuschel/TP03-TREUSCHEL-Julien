@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import {BackendServiceService} from '../backend-service.service';
 import {Observable,of,from} from 'rxjs';
 import {filter} from 'rxjs/operators';
@@ -13,7 +13,8 @@ export class ProduitsComponent implements OnInit {
 
   constructor(private backendServiceService : BackendServiceService) { }
 
-  @Output() observable5Modif$: Observable<any>;
+  @Output()rechercher: EventEmitter <string> = new EventEmitter<string>();
+  
   
   observable1$ : Observable<string>;
   observable5$ : Observable<any> = null;
